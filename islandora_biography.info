@@ -1,0 +1,6 @@
+name = islandora_biography
+dependencies[] = islandora_image_sp
+description = a simple biography cmodel based on image cmodel
+package = Islandora
+version = 6.x-dev
+core = 6.x

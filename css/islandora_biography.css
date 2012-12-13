@@ -1,0 +1,26 @@
+.bio-img {
+  border: none;
+  float: left;
+  
+  margin: 1em;
+  
+}
+
+.bio-sitting {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.bio-title {
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.bio-body {
+    font-size: 11px;
+}
+
+.bio-ack {
+    font-size: 10px;
+    font-style: italic;
+}
