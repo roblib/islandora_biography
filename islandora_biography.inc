@@ -26,8 +26,12 @@ class DisplayBiography {
     $html .='<div class = "bio-sitting">' . $strings['sitting_dates'][0] . '</div><br />';
     $html .='<div class="bio-img">'.$img.'</div>';
     $html .= '<div class = "bio-body">' . $strings['bio_desc'][0] . '<p>' . 'References: ' . $strings['references'][0] . ' '. $guide .'</p>';
-    $html .= '<div class = "bio-ack">Photograph courtesy of PEI Public Archives and Records Office, 
-      Reference Number ' . $strings['paro_number'][0];
+    if(!empty($strings['paro_number'][0])  && strlen($strings['paro_number'][0]) > 3){
+      $html .= '<div class = "bio-ack">Photograph courtesy of PEI Public Archives and Records Office, 
+      Reference Number ' . $strings['paro_number'][0] .'</div>';
+    } else {
+      $html .= "<div class = 'bio-ack'>We currently do not have an image of this Member in the collection. <a href = '/node/26'>Can you help</a>?</div>";
+    }
     $collection_fieldset = array(
       '#collapsible' => FALSE,
       '#value' => $html,
